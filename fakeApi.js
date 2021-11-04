@@ -20,8 +20,6 @@ const fakeApi = () => {
             title: "Next.js",
             excerpt: "Cool Next.js Project"
         },
-        
-        
     ]
 }
 
