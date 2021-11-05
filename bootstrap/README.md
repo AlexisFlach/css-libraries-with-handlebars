@@ -1,1 +1,34 @@
-Bootstrap
+#### Bootstrap
+
+###### Navbar
+
+https://getbootstrap.com/docs/5.0/components/navbar/
+
+```
+<header>
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <div class="container">
+            <a href="#" class="navbar-brand">Logo</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="http://localhost:3000/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://localhost:3000/about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://localhost:3000/projects" class="nav-link">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+```
+

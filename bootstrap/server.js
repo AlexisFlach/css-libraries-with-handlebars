@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
     res.render('main', { layout: 'index' })
 })
 
+app.get('/about', (req, res) => {
+    res.render('about', { layout: 'index' })
+})
+
 app.get('/projects', (req, res) => {
     res.render('projects', { layout: 'index', projects: fakeApi(), hasProjects: hasProjects })
 })
