@@ -1,11 +1,21 @@
-<h2>Projects</h2>
+<section>
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="row">
+            {{#if hasProjects}}
+            {{#each projects}}
+            <div class="col-md-3">
+                <div class="card">
+                    <h4 class="card-title">{{this.title}}</h4>
+                    <p class="card-text">{{this.excerpt}}</p>
+                    <a href="http://localhost:3000/projects/{{this.id}}" class="btn btn-light mt-3">
+                    <i class="bi bi-chevron-right"></i> Read More
+                    </a>
+                </div>
+            </div>
+            {{/each}}
 
-{{#if hasProjects}}
-
-<ul>
-    {{#each projects}}
-    <li>{{this.title}}</li>
-    {{/each}}
-</ul>
-
-{{/if}}
+            {{/if}}
+        </div>
+    </div>
+</section>

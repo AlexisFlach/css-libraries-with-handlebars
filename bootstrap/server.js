@@ -3,6 +3,7 @@ const app = express();
 const PORT = 3000;
 
 const fakeApi = require('./fakeApi');
+const findProject = require('./helpers');
 
 const handlebars = require('express-handlebars');
 
@@ -29,6 +30,16 @@ app.get('/about', (req, res) => {
 
 app.get('/projects', (req, res) => {
     res.render('projects', { layout: 'index', projects: fakeApi(), hasProjects: hasProjects })
+})
+app.get('/projects/:id', (req, res) => {
+    
+    const id = req.params.id;
+    
+    const projects = fakeApi();
+  
+    const project = projects.filter(e => e.id ==id);    
+      
+    res.render('project', { layout: 'index', project: project })
 })
 
 app.listen(PORT, () => {
